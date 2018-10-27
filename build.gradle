@@ -21,11 +21,18 @@ repositories {
     mavenCentral()
 }
 
+dependencyManagement {
+    dependencies {
+        dependency 'com.amazonaws:aws-java-sdk-rekognition:1.11.438'
+    }
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-    implementation("org.springframework.boot:spring-boot-devtools")
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    implementation 'com.amazonaws:aws-java-sdk-rekognition'
 }

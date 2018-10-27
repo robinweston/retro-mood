@@ -5,6 +5,18 @@
     <title>Retro Mood</title>
 </head>
 <body>
-    <p th:text="'Hello, ' + ${name} + '!'" />
+<h2>Retro Mood</h2>
+<form method="post" action="/" enctype="multipart/form-data">
+    <label for="photo">Upload photo of retro board below</label>
+    <br/><br/>
+    <input type="file" id="photo" name="photo" accept="image/*"/>
+    <br/><br/>
+    <button type="submit">Upload Photo</button>
+
+    <h3>Results</h3>
+    <ul>
+        <li th:each="textResult : ${textResults}" th:text="${textResult}"></li>
+    </ul>
+</form>
 </body>
 </html>
