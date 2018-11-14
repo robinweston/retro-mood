@@ -24,6 +24,7 @@ repositories {
 dependencyManagement {
     dependencies {
         dependency 'com.amazonaws:aws-java-sdk-rekognition:1.11.438'
+        dependency 'com.amazonaws:aws-java-sdk-comprehend:1.11.438'
     }
 }
 
@@ -35,4 +36,5 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-devtools'
     implementation 'com.amazonaws:aws-java-sdk-rekognition'
+    implementation 'com.amazonaws:aws-java-sdk-comprehend'
 }
